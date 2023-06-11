@@ -1,0 +1,21 @@
+{
+  "name": "playwright_ts",
+  "version": "1.0.0",
+  "description": "A demo framework built using Playwright and Typescript.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SwathiVisagn123/Playwright_TS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SwathiVisagn123/Playwright_TS/issues"
+  },
+  "homepage": "https://github.com/SwathiVisagn123/Playwright_TS#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.35.0"
+  }
+}
