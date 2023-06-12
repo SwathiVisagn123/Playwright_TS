@@ -18,8 +18,7 @@ fixture("login through UI", async ({ page, data }) => {
 
   //go to Login Page
   await login.goToLogin();
+
   //enter credentials
-  await login.email.type(data.email);
-  await login.email.type(data.password);
-  await login.submit.click();
+  await login.login(data.email, data.password);
 });
