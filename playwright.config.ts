@@ -39,7 +39,7 @@ export default defineConfig({
     {
       name: "chromium",
       use: {
-        baseURL: "https://naveenautomationlabs.com/opencart/",
+        baseURL: "https://naveenautomationlabs.com/opencart",
         ...devices["Desktop Chrome"],
         headless: true,
       },
