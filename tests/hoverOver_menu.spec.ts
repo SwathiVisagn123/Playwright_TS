@@ -1,5 +1,4 @@
 import { test, expect } from "@playwright/test";
-import { fixture } from "../utils/testbase";
 import { homePage } from "../pageObjects/homePage";
 
 test.beforeEach(async ({ page }) => {
@@ -15,7 +14,7 @@ test.beforeEach(async ({ page }) => {
   //
 });
 
-fixture("hover over menu and inner menu selection", async ({ page, data }) => {
+test("hover over menu and inner menu selection", async ({ page }) => {
   const home = new homePage(page);
   //wait for page to load
   await page.waitForLoadState("networkidle");
