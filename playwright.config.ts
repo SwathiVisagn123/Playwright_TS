@@ -41,7 +41,7 @@ export default defineConfig({
       use: {
         baseURL: "https://naveenautomationlabs.com/opencart/",
         ...devices["Desktop Chrome"],
-        headless: false,
+        headless: true,
       },
     },
 
