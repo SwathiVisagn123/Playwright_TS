@@ -7,6 +7,9 @@ export class homePage {
   readonly innerMenuMonitors: Locator;
   readonly content: Locator;
   readonly confirmHeading: Locator;
+  readonly logo: Locator;
+  readonly wishlistIcon: Locator;
+  readonly wishlistProducts: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -15,6 +18,9 @@ export class homePage {
     );
     this.componentsMenu = page.getByRole("link", { name: "Components" });
     this.innerMenuMonitors = page.getByRole("link", { name: "Monitors (2)" });
+    this.logo = page.getByAltText("naveenopencart");
+    this.wishlistIcon = page.getByRole("link", { name: " Wish List (1)" });
+    this.wishlistProducts = page.locator("tbody tr");
   }
 
   async confirmMenuPage() {

@@ -29,7 +29,7 @@ export class loginPage {
 
   async login(email: string, password: string) {
     await this.email.type(email);
-    await this.email.type(password);
+    await this.password.type(password);
     await this.submit.click();
   }
 }
