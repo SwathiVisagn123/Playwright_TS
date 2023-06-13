@@ -22,11 +22,11 @@ fixture.beforeEach(async ({ page, data }) => {
   //login
   await login.login(data.email, data.password);
 
-  //navigate to home page
+  //go to home
   await home.logo.click();
 });
 
-fixture("add wish list item through api", async ({ page, data }) => {
+fixture("add to cart through api", async ({ page, data }) => {
   const home = new homePage(page);
 
   //create a new context for api requests
@@ -36,12 +36,14 @@ fixture("add wish list item through api", async ({ page, data }) => {
   //wait for page to load
   await page.waitForLoadState("networkidle");
 
-  //add wishlist item thro' API
-  //BUG FOUND : WISHLIST API ADDS PRODUCT IN BASKET
-  await apiUtil.wishlist(data.wishlistItem, data.wishlist_endpoint);
+  //add product thro' API
+  await apiUtil.addToCart(data.addToCartItem, data.addCart_endpoint);
 
-  //assert UI response
-  await home.wishlistIcon.click();
+  //go to cart
+  await home.cartIcon.click();
 
-  expect(await home.wishlistProducts.count()).not.toBeNull();
+  //assert presence of product added to cart
+  await expect(
+    page.getByRole("cell", { name: data.addCartProductName, exact: true })
+  ).toBeVisible();
 });
