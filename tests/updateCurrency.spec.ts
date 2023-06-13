@@ -13,7 +13,7 @@ test.beforeEach(async ({ page }) => {
   await expect(page).toHaveURL(/opencart/);
 });
 
-fixture.only("update currency in home page", async ({ page, data }) => {
+fixture("update currency in home page", async ({ page, data }) => {
   const home = new homePage(page);
 
   await home.currencyDropdown.click();
