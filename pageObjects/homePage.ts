@@ -10,6 +10,7 @@ export class homePage {
   readonly logo: Locator;
   readonly wishlistIcon: Locator;
   readonly wishlistProducts: Locator;
+  readonly cartIcon: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -19,8 +20,9 @@ export class homePage {
     this.componentsMenu = page.getByRole("link", { name: "Components" });
     this.innerMenuMonitors = page.getByRole("link", { name: "Monitors (2)" });
     this.logo = page.getByAltText("naveenopencart");
-    this.wishlistIcon = page.getByRole("link", { name: " Wish List (1)" });
+    this.wishlistIcon = page.getByRole("link", { name: / Wish List/ });
     this.wishlistProducts = page.locator("tbody tr");
+    this.cartIcon = page.getByRole("link", { name: " Shopping Cart" });
   }
 
   async confirmMenuPage() {
