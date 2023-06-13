@@ -2,8 +2,8 @@
   "email": "swathika.visagn@gmail.com",
   "password": "playwright",
   "featured": "iPhone",
-  "wishlistItem": { "product_id": "43" },
-  "wishlist_endpoint": "/index.php?route=account/wishlist/add",
+  "wishlistItem": { "product_id": 43 },
+  "wishlist_endpoint": "/index.php?route=account/wishlist/add"
   "addToCartItem": { "product_id": 43, "quantity": 1 },
   "addCart_endpoint": "/index.php?route=checkout/cart/add",
   "addCartProductName": "MacBook"
