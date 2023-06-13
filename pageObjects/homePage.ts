@@ -11,6 +11,9 @@ export class homePage {
   readonly wishlistIcon: Locator;
   readonly wishlistProducts: Locator;
   readonly cartIcon: Locator;
+  readonly currencyDropdown: Locator;
+  readonly dollar: Locator;
+  readonly dollarSymbol: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -23,6 +26,9 @@ export class homePage {
     this.wishlistIcon = page.getByRole("link", { name: / Wish List/ });
     this.wishlistProducts = page.locator("tbody tr");
     this.cartIcon = page.getByRole("link", { name: " Shopping Cart" });
+    this.currencyDropdown = page.getByRole("button", { name: "$ Currency " });
+    this.dollar = page.getByRole("button", { name: "$ US Dollar" });
+    this.dollarSymbol = page.locator("strong");
   }
 
   async confirmMenuPage() {
