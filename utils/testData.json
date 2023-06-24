@@ -1,6 +1,4 @@
 {
-  "email": "swathika.visagn@gmail.com",
-  "password": "playwright",
   "featured": "iPhone",
   "wishlistItem": { "product_id": 43 },
   "wishlist_endpoint": "/index.php?route=account/wishlist/add",
