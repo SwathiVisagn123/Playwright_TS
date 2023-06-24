@@ -20,5 +20,5 @@ fixture("login through UI", async ({ page, data }) => {
   await login.goToLogin();
 
   //enter credentials
-  await login.login(data.email, data.password);
+  await login.login(`${process.env.email}`, `${process.env.password}`);
 });
