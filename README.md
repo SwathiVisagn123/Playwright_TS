@@ -16,7 +16,7 @@ I have used Open Cart by Naveen automation Labs to automate tests using Playwrig
 - Typescript
 - Fixtures for test inputs
 - API and UI validations
-- Environment Variables passed in command line
+- User Credentials passed through Github Secrets
 
 ## CI/CD
 
