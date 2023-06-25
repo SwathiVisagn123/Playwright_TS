@@ -9,6 +9,7 @@ export class accountPage {
   readonly continueBtn: Locator;
   readonly successAlert: Locator;
   readonly accountBreadcrumb: Locator;
+  readonly accountPage: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -23,6 +24,9 @@ export class accountPage {
     this.accountBreadcrumb = page.locator(".breadcrumb li", {
       hasText: "Account",
     });
+    this.accountPage = page
+      .locator("#content")
+      .getByRole("heading", { name: "My Account" });
   }
 
   async changeSubscription() {
