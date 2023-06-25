@@ -26,5 +26,5 @@ jobs:
           path: playwright-report/
           retention-days: 30
         env:
-          email: ${{ secrets.email }}
-          password: ${{ secrets.password}}
+          EMAIL: ${{ secrets.EMAIL }}
+          PASSWORD: ${{ secrets.PASSWORD}}
