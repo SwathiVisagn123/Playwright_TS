@@ -1,6 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { fixture } from "../utils/testbase";
 import { loginPage } from "../pageObjects/loginPage";
+import { accountPage } from "../pageObjects/accountPage";
 
 test.beforeEach(async ({ page }) => {
   //go to opencart
@@ -15,10 +16,12 @@ test.beforeEach(async ({ page }) => {
 
 fixture("login through UI", async ({ page, data }) => {
   const login = new loginPage(page);
+  const account = new accountPage(page);
 
   //go to Login Page
   await login.goToLogin();
 
   //enter credentials
   await login.login(`${process.env.email}`, `${process.env.password}`);
+  await expect(account.accountPage).toBeVisible();
 });
