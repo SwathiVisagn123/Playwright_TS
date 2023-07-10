@@ -20,7 +20,7 @@ fixture.beforeEach(async ({ page, data }) => {
   await login.goToLogin();
 
   //login
-  await login.login(`${process.env.EMAIL}`, `${process.env.PASSWORD}`);
+  await login.login(process.env.EMAIL, process.env.PASSWORD);
 
   //go to home
   await home.logo.click();

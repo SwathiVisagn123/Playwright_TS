@@ -20,7 +20,7 @@ fixture.beforeEach(async ({ page, data }) => {
   await login.goToLogin();
 
   //login
-  await login.login(`${process.env.EMAIL}`, `${process.env.PASSWORD}`);
+  await login.login(process.env.EMAIL, process.env.PASSWORD);
 });
 
 fixture("Cancel or Add newsletter subscription", async ({ page, data }) => {
