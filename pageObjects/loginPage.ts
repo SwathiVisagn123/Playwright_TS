@@ -27,7 +27,7 @@ export class loginPage {
     await expect(this.returningCust).toBeVisible();
   }
 
-  async login(email: string, password: string) {
+  async login(email, password) {
     await this.email.type(email);
     await this.password.type(password);
     await this.submit.click();

@@ -22,6 +22,6 @@ fixture("login through UI", async ({ page, data }) => {
   await login.goToLogin();
 
   //enter credentials
-  await login.login(`${process.env.EMAIL}`, `${process.env.PASSWORD}`);
+  await login.login(process.env.EMAIL, process.env.PASSWORD);
   await expect(account.accountPage).toBeVisible();
 });
